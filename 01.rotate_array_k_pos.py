@@ -28,7 +28,10 @@ def right_rotate_array_by_k_pos_2(elements, k):
 
 
 def reverse_(lst, i, j):
-    lst[i], lst[j] = lst[j], lst[i]            
+    while i < j:
+        lst[i], lst[j] = lst[j], lst[i]
+        i = i+1
+        j = j-1
 
 def right_rotate_array_by_k_pos_3(elements, k):
     # add an auxiliary array and copy the elements to new pos
@@ -54,5 +57,5 @@ right_rotate_array_by_k_pos_2(l2, 3)
 print(l2)
 
 l3 = [1, 2, 3, 4, 5, 6, 7]
-right_rotate_array_by_k_pos_2(l3, 3)
+right_rotate_array_by_k_pos_3(l3, 3)
 print(l3)
